@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMath.ODE", "OpenMath.ODE\OpenMath.ODE.csproj", "{8F0BA566-0CDC-42CE-ACA2-77A18879CAC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrariesTests", "LibrariesTests\LibrariesTests.csproj", "{C9AEB1D8-D829-46DF-A0FA-811D70D8E449}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F0BA566-0CDC-42CE-ACA2-77A18879CAC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0BA566-0CDC-42CE-ACA2-77A18879CAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0BA566-0CDC-42CE-ACA2-77A18879CAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0BA566-0CDC-42CE-ACA2-77A18879CAC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9AEB1D8-D829-46DF-A0FA-811D70D8E449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9AEB1D8-D829-46DF-A0FA-811D70D8E449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9AEB1D8-D829-46DF-A0FA-811D70D8E449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9AEB1D8-D829-46DF-A0FA-811D70D8E449}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
