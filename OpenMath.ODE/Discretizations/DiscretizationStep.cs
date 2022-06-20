@@ -1,7 +1,7 @@
 ﻿using OpenMath.ODE.Entities;
 using OpenMath.ODE.Interfaces;
 
-namespace OpenMath.ODE.Discretization
+namespace OpenMath.ODE.Discretizations
 {
     public class DiscretizationStep : IMethodDiscretization
     {
@@ -21,7 +21,7 @@ namespace OpenMath.ODE.Discretization
 
         public double[] Discretization(double initial, double final)
         {
-            CheckODE.TimeConditions(initial, final);
+            ValidatorODE.TimeValues(initial, final);
 
             int n = (int)Math.Round((final - initial) / Step) + 1;
             double[] t = new double[n];

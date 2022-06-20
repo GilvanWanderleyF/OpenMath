@@ -1,4 +1,4 @@
-﻿using OpenMath.ODE.Abstracts;
+﻿using OpenMath.ODE.Core;
 using OpenMath.ODE.Entities;
 
 namespace OpenMath.ODE.Methods.RungeKuttaFour
@@ -9,7 +9,7 @@ namespace OpenMath.ODE.Methods.RungeKuttaFour
         public RungeKuttaFourMethod() { }
 
 
-        public override double[,] Solve(DiffEquation[] funcs, double[] initialCond, double[] time)
+        public override double[,] Solve(DifferentialEquation[] funcs, double[] initialCond, double[] time)
         {            
             double[,] result = new double[time.Length, initialCond.Length];
 
@@ -59,7 +59,7 @@ namespace OpenMath.ODE.Methods.RungeKuttaFour
                         }
 
                         double v = yn0[j] + (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]) / 6.0;
-                        CheckODE.ValidValue(v);
+                        ValidatorODE.Double(v);
                         result[i, j] = v;
                     }
                 }

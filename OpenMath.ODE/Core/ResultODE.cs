@@ -1,11 +1,6 @@
 ﻿using OpenMath.ODE.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace OpenMath.ODE
+namespace OpenMath.ODE.Core
 {
     public class ResultODE : IResultODE
     {
@@ -17,7 +12,7 @@ namespace OpenMath.ODE
                 for (int i = 0; i < data.GetLength(0); i++)
                 {
                     Result[j].Add(data[i, j]);
-                    if (j==0)
+                    if (j == 0)
                     {
                         Time.Add(time[i]);
                     }
@@ -30,8 +25,7 @@ namespace OpenMath.ODE
         }
 
         public List<List<double>> Result { get; } = new();
-        public List<double> Time { get;} = new();
-
+        public List<double> Time { get; } = new();
 
     }
 }

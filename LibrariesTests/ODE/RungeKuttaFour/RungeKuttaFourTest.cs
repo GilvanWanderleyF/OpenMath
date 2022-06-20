@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using OpenMath.ODE;
-using OpenMath.ODE.Discretization;
+using OpenMath.ODE.Core;
+using OpenMath.ODE.Discretizations;
 using OpenMath.ODE.Interfaces;
 using OpenMath.ODE.Methods.RungeKuttaFour;
 
 namespace LibrariesTests.ODE.RungeKuttaFour
 {
     [Category("Runge-Kutta-Four Test")]
-    public class RungeKuttaFourTestCreate
+    internal class RungeKuttaFourTest
     {
         //RungeKuttaFourTestCreate
-        private DiffEquation[] equations;
+        private DifferentialEquation[] equations;
         double[] initialCond;
         private ISolverODE ODE;
         private IResultODE result;
@@ -30,7 +30,7 @@ namespace LibrariesTests.ODE.RungeKuttaFour
             Assert.That(ODE.GetType(), Is.EqualTo(typeof(RungeKuttaFourSolver)));
 
             Assert.IsNotNull(ODE.Equations);
-            Assert.That(ODE.Equations, Is.EqualTo(Array.Empty<DiffEquation>()));
+            Assert.That(ODE.Equations, Is.EqualTo(Array.Empty<DifferentialEquation>()));
 
             Assert.IsNotNull(ODE.Method);
             Assert.That(ODE.Method.GetType(), Is.EqualTo(typeof(RungeKuttaFourMethod)));

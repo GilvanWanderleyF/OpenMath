@@ -1,4 +1,4 @@
-﻿- Create the Exceptions module
-- Create other Discretization class (can be DiscretizationLength => Length is the number of points)
-- Create other Solver class (can be RungeKuttaTwoSolver or RungeKuttaFehlberg)
+﻿- Create other Solver class (can be RungeKuttaTwoSolver or RungeKuttaFehlberg)
 - Create the test in LibrariesTests
+	- Discrezation Test - OK
+	- EDO Test

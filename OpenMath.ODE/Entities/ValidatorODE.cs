@@ -1,10 +1,10 @@
-﻿namespace OpenMath.ODE.Entities
+﻿using OpenMath.ODE.Core;
+
+namespace OpenMath.ODE.Entities
 {
-    internal static class CheckODE
+    internal static class ValidatorODE
     {
-
-
-        public static void Dimension(DiffEquation[] equations, double[] initialCond)
+        public static void ODE(DifferentialEquation[] equations, double[] initialCond)
         {
             if (equations.Length != initialCond.Length)
             {
@@ -18,7 +18,7 @@
             }
         }
 
-        public static void TimeConditions(double initial, double final)
+        public static void TimeValues(double initial, double final)
         {
             if (final < initial)
             {
@@ -26,7 +26,7 @@
             }
         }
 
-        public static void ValidValue(double value)
+        public static void Double(double value)
         {
             if (!double.IsNormal(value))
             {

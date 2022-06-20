@@ -1,7 +1,9 @@
-﻿namespace OpenMath.ODE.Interfaces
+﻿using OpenMath.ODE.Core;
+
+namespace OpenMath.ODE.Interfaces
 {
     public interface IMethodODE
     {
-        public double[,] Solve(DiffEquation[] funcs, double[] initialCond, double[] time);
+        public double[,] Solve(DifferentialEquation[] funcs, double[] initialCond, double[] time);
     }
 }

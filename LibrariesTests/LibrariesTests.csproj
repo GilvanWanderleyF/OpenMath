@@ -20,8 +20,4 @@
     <ProjectReference Include="..\OpenMath.ODE\OpenMath.ODE.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ODE\Discretization\" />
-  </ItemGroup>
-
 </Project>
